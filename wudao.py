@@ -9,7 +9,7 @@ import re
 
 __iid__ = "PythonInterface/v0.2"
 __prettyname__ = "Wudao Dict"
-__version__ = "1.1"
+__version__ = "1.1.1"
 __trigger__ = "wd"
 __author__ = "Outvi V"
 __dependencies__ = []
@@ -39,7 +39,7 @@ def handleQuery(query):
             subtext=str("\n".join(lines[2:])),
             actions=[
                 ClipAction(
-                    "Copy word to clipboard", query.string)
+                    "Copy word to clipboard", keyword)
             ]
         )
     else:
