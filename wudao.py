@@ -9,7 +9,7 @@ import re
 
 __iid__ = "PythonInterface/v0.2"
 __prettyname__ = "Wudao Dict"
-__version__ = "1.1.1"
+__version__ = "1.1.2"
 __trigger__ = "wd"
 __author__ = "Outvi V"
 __dependencies__ = []
@@ -28,7 +28,7 @@ def handleQuery(query):
                 text=__prettyname__,
                 subtext="Enter a word to search. End with \".\"."
             )
-        keyword = keyword.rstrip(".")
+        keyword = keyword.rstrip(".").strip()
         result = check_output([which("wd"), keyword]).decode()
         escaped = ansi_escape.sub('', result)
         lines = escaped.split("\n")
