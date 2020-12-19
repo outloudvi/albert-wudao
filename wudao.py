@@ -2,17 +2,15 @@
 
 """Wudao dict backend for albert"""
 
-from albertv0 import *
+from albert import *
 from shutil import which
 from subprocess import check_output
 import re
 
-__iid__ = "PythonInterface/v0.2"
-__prettyname__ = "Wudao Dict"
-__version__ = "1.1.2"
-__trigger__ = "wd"
-__author__ = "Outvi V"
-__dependencies__ = []
+__title__ = "Wudao Dict"
+__version__ = "0.2.0"
+__triggers__ = "wd "
+__authors__ = "Outvi V"
 
 if which("wd") is None:
     raise Exception("'wd' is not in $PATH.")
@@ -24,8 +22,8 @@ def handleQuery(query):
         keyword = query.string
         if keyword == "" or keyword[-1] != ".":
             return Item(
-                id=__prettyname__,
-                text=__prettyname__,
+                id=__title__,
+                text=__title__,
                 subtext="Enter a word to search. End with \".\"."
             )
         keyword = keyword.rstrip(".").strip()
@@ -34,7 +32,7 @@ def handleQuery(query):
         lines = escaped.split("\n")
 
         return Item(
-            id=__prettyname__,
+            id=__title__,
             text=str(lines[1]),
             subtext=str("\n".join(lines[2:])),
             actions=[
