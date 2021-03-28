@@ -1,5 +1,7 @@
 **Maintenance on this repository has been stopped since many distros have removed `albert` due to licensing problems and I've stopped using it. See [albertlauncher/albert#765](https://github.com/albertlauncher/albert/issues/765) for details.**
 
+**See [ulauncher-wudao](https://github.com/outloudvi/ulauncher-wudao) for an alternative still maintained.**
+
 # albert-wudao
 [Albert](https://github.com/albertlauncher/albert) plugin for [Wudao dictionary](https://github.com/ChestnutHeng/Wudao-dict).
 
